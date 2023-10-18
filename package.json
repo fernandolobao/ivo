@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "http://fernandolobao.github.io/ivo",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
+    "deploy-storybook": "storybook build && gh-pages -d storybook-static",
     "build-styles-web": "theo styles/tokens/tokens.yml --transform web --format scss --dest styles/",
     "build-styles-web:dev": "theo styles/tokens/tokens.yml --transform web --format scss --dest styles/"
   },
