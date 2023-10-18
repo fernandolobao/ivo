@@ -4,6 +4,8 @@
   font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   position: relative;
   padding: 0 2px;
+  display: inline-block;
+  overflow: hidden;
   &:hover {
     color: white;
   }
@@ -22,6 +24,7 @@
   }
   span.ripple {
     position: absolute;
+    display: inline;
     content: "";
     z-index: 0;
     width: 0;
@@ -63,6 +66,7 @@
     background-color: $primary-dark;
     transform: translate(-50%, -50%);
     transition: width 0.25s, padding-top 0.25s;
+    filter: blur(8px);
   }
 }
 .button--primary {

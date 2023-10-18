@@ -43,7 +43,7 @@ export const Primary: Story = {
   parameters: {
     docs: {
       story: { inline: false },
-      canvas: { sourceState: "hide" },
+      // canvas: { sourceState: "hide" },
     },
   },
 };
@@ -57,7 +57,7 @@ export const Secondary: Story = {
   parameters: {
     docs: {
       story: { inline: false },
-      canvas: { sourceState: "hide" },
+      // canvas: { sourceState: "hide" },
     },
   },
 };
@@ -73,7 +73,7 @@ export const Link: Story = {
   parameters: {
     docs: {
       story: { inline: false },
-      canvas: { sourceState: "hide" },
+      // canvas: { sourceState: "hide" },
     },
   },
 };
@@ -87,7 +87,7 @@ export const Small: Story = {
   parameters: {
     docs: {
       story: { inline: false },
-      canvas: { sourceState: "hide" },
+      // canvas: { sourceState: "hide" },
     },
   },
 };
@@ -101,7 +101,7 @@ export const Large: Story = {
   parameters: {
     docs: {
       story: { inline: false },
-      canvas: { sourceState: "hide" },
+      // canvas: { sourceState: "hide" },
     },
   },
 };
@@ -115,7 +115,7 @@ export const XLarge: Story = {
   parameters: {
     docs: {
       story: { inline: false },
-      canvas: { sourceState: "hide" },
+      // canvas: { sourceState: "hide" },
     },
   },
 };
