@@ -4,7 +4,7 @@ import classNames from "classnames";
 
 const tuple = <T extends string[]>(...args: T) => args;
 const VARIANT = tuple("primary", "secondary");
-const SIZE = tuple("small", "medium", "large", "xlarge");
+const SIZE = tuple("sm", "md", "lg", "xlg");
 const TYPE = tuple("button", "reset", "submit");
 
 export interface ComponentProps {
@@ -31,7 +31,7 @@ type ActionProps = ComponentProps & ButtonProps;
  */
 export const Button: FC<ActionProps> = ({
   variant = "primary",
-  size = "medium",
+  size = "md",
   type = "button",
   className,
   children,
@@ -76,10 +76,17 @@ export const Button: FC<ActionProps> = ({
           }
           onClick && onClick();
         }}
-        className={classNames([styles[`${as}`], styles[`${as}--${variant}`]], {
-          [styles.animateRipple]: hover,
-          [styles.animateClick]: click,
-        })}
+        className={classNames(
+          [
+            styles[`${as}`],
+            styles[`${as}--${variant}`],
+            styles[`${as}--${size}`],
+          ],
+          {
+            [styles.animateRipple]: hover,
+            [styles.animateClick]: click,
+          }
+        )}
         {...rest}
       >
         <span

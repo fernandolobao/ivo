@@ -21,7 +21,7 @@ const meta = {
       control: { type: "radio" },
     },
     size: {
-      options: ["small", "medium", "large", "xlarge"],
+      options: ["sm", "md", "lg", "xlg"],
       description:
         "How large should the button be? `small`, `medium`, `large` or `xlarge`?",
       table: { defaultValue: { summary: "medium" } },
@@ -37,7 +37,7 @@ type Story = StoryObj<typeof Button>;
 export const Primary: Story = {
   args: {
     children: "Button",
-    size: "medium",
+    size: "md",
     variant: "primary",
   },
   parameters: {
@@ -51,7 +51,7 @@ export const Primary: Story = {
 export const Secondary: Story = {
   args: {
     children: "Button",
-    size: "medium",
+    size: "md",
     variant: "secondary",
   },
   parameters: {
@@ -65,7 +65,7 @@ export const Secondary: Story = {
 export const Link: Story = {
   args: {
     children: "Link",
-    size: "medium",
+    size: "md",
     as: "link",
     href: "#",
     target: "_blank",
@@ -81,7 +81,7 @@ export const Link: Story = {
 export const Small: Story = {
   args: {
     children: "Button",
-    size: "small",
+    size: "sm",
     variant: "primary",
   },
   parameters: {
@@ -95,7 +95,7 @@ export const Small: Story = {
 export const Large: Story = {
   args: {
     children: "Button",
-    size: "large",
+    size: "lg",
     variant: "primary",
   },
   parameters: {
@@ -109,7 +109,7 @@ export const Large: Story = {
 export const XLarge: Story = {
   args: {
     children: "Button",
-    size: "xlarge",
+    size: "xlg",
     variant: "primary",
   },
   parameters: {
