@@ -2,21 +2,24 @@
 
 .input {
   display: inline-flex;
-  padding: 0 $spacing-stack-xs;
-  background-color: $neutral-white;
-  border: 1px solid $neutral-30;
-  border-radius: $border-radius-pill;
-  transition: border-color 0.125s;
-  > input {
-    border: none;
-    background-color: transparent;
-    padding: 0;
-    height: $spacing-stack-md;
-    &:focus-visible {
-      outline: none;
+  flex-direction: column;
+  .wrapper {
+    padding: 0 $spacing-stack-xs;
+    background-color: $neutral-white;
+    border: 1px solid $neutral-30;
+    border-radius: $border-radius-pill;
+    transition: border-color 0.125s;
+    > input {
+      border: none;
+      background-color: transparent;
+      padding: 0;
+      height: $spacing-stack-md;
+      &:focus-visible {
+        outline: none;
+      }
     }
-  }
-  &:has(> input:focus-visible) {
-    border-color: $color-primary-dark;
+    &:has(> input:focus-visible) {
+      border-color: $color-primary-dark;
+    }
   }
 }

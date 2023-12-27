@@ -2,6 +2,7 @@ import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { useArgs } from "@storybook/preview-api";
 import { Input } from "./Input";
+import { Weather } from "untitledui-js";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
@@ -45,6 +46,32 @@ export const Simple: Story = {
   args: {
     value: "Input",
     size: "md",
+    variant: "primary",
+  },
+  parameters: {
+    docs: {
+      story: { inline: false },
+      // canvas: { sourceState: "hide" },
+    },
+  },
+  render: function Render(args) {
+    const [{ value }, updateArgs] = useArgs();
+
+    function onChange(str: string) {
+      updateArgs({ value: str });
+    }
+
+    return (
+      <Input {...args} onChange={(value) => onChange(value)} value={value} />
+    );
+  },
+};
+
+export const Helper: Story = {
+  args: {
+    value: "Input",
+    size: "md",
+    helper: <Weather.Lightning02 size="16px" />,
     variant: "primary",
   },
   parameters: {

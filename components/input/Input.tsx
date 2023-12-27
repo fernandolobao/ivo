@@ -79,18 +79,20 @@ export const Input: FC<ActionProps> = ({
       )}
     >
       {label && <span className={classNames(styles.label)}>{helper}</span>}
-      <input
-        className={classNames(styles.input)}
-        ref={inputRef}
-        {...props}
-        value={value}
-        type={type}
-        disabled={disabled}
-        placeholder={placeholder}
-        onChange={(event) => changeHandler(event)}
-        onFocus={() => focusHandler()}
-        onBlur={() => blurHandler()}
-      />
+      <div className={styles.wrapper}>
+        <input
+          className={classNames(styles.input)}
+          ref={inputRef}
+          {...props}
+          value={value}
+          type={type}
+          disabled={disabled}
+          placeholder={placeholder}
+          onChange={(event) => changeHandler(event)}
+          onFocus={() => focusHandler()}
+          onBlur={() => blurHandler()}
+        />
+      </div>
       {helper && <span className={classNames(styles.helper)}>{helper}</span>}
     </div>
   );
